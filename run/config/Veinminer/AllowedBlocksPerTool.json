@@ -1,0 +1,62 @@
+{
+  "item.minecraft.wooden_pickaxe": [
+    "block.minecraft.coal_ore",
+    "block.minecraft.diamond_ore",
+    "block.minecraft.lapis_ore",
+    "block.minecraft.copper_ore",
+    "block.minecraft.redstone_ore",
+    "block.minecraft.iron_ore",
+    "block.minecraft.gold_ore",
+    "block.minecraft.emerald_ore"
+  ],
+  "item.minecraft.stone_pickaxe": [
+    "block.minecraft.coal_ore",
+    "block.minecraft.diamond_ore",
+    "block.minecraft.lapis_ore",
+    "block.minecraft.copper_ore",
+    "block.minecraft.redstone_ore",
+    "block.minecraft.iron_ore",
+    "block.minecraft.gold_ore",
+    "block.minecraft.emerald_ore"
+  ],
+  "item.minecraft.iron_pickaxe": [
+    "block.minecraft.coal_ore",
+    "block.minecraft.diamond_ore",
+    "block.minecraft.lapis_ore",
+    "block.minecraft.copper_ore",
+    "block.minecraft.redstone_ore",
+    "block.minecraft.iron_ore",
+    "block.minecraft.gold_ore",
+    "block.minecraft.emerald_ore"
+  ],
+  "item.minecraft.netherite_pickaxe": [
+    "block.minecraft.coal_ore",
+    "block.minecraft.diamond_ore",
+    "block.minecraft.lapis_ore",
+    "block.minecraft.copper_ore",
+    "block.minecraft.redstone_ore",
+    "block.minecraft.iron_ore",
+    "block.minecraft.gold_ore",
+    "block.minecraft.emerald_ore"
+  ],
+  "item.minecraft.diamond_pickaxe": [
+    "block.minecraft.coal_ore",
+    "block.minecraft.diamond_ore",
+    "block.minecraft.lapis_ore",
+    "block.minecraft.copper_ore",
+    "block.minecraft.redstone_ore",
+    "block.minecraft.iron_ore",
+    "block.minecraft.gold_ore",
+    "block.minecraft.emerald_ore"
+  ],
+  "item.minecraft.golden_pickaxe": [
+    "block.minecraft.coal_ore",
+    "block.minecraft.diamond_ore",
+    "block.minecraft.lapis_ore",
+    "block.minecraft.copper_ore",
+    "block.minecraft.redstone_ore",
+    "block.minecraft.iron_ore",
+    "block.minecraft.gold_ore",
+    "block.minecraft.emerald_ore"
+  ]
+}

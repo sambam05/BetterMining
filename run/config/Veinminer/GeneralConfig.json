@@ -1,0 +1,17 @@
+{
+  "veinminerEnabled": true,
+  "requireCrouch": true,
+  "checkToolDurability": true,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 5,
+  "dynamicMaxBlocks": false,
+  "maxBlocks": 64,
+  "minBlocks": 16,
+  "maxDynamicBlocks": 64,
+  "enableParticleOutline": true,
+  "particleDurationTicks": 60,
+  "particleRed": 255,
+  "particleGreen": 0,
+  "particleBlue": 0,
+  "blocksPerTool": false
+}

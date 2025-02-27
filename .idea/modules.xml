@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.2-.4.client.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.2-.4.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.2-.4.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.2-.4.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.2-.4.test.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.2-.4.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.2-.4_Enchantment.client.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.2-.4_Enchantment.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.2-.4_Enchantment.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.2-.4_Enchantment.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.2-.4_Enchantment.test.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.2-.4_Enchantment.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.2-1.21.4.client.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.2-1.21.4.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.2-1.21.4.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.2-1.21.4.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.2-1.21.4.test.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.2-1.21.4.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.x.client.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.x.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.x.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.x.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.x.test.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.x.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.x_-_LuckPerms.client.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.x_-_LuckPerms.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.x_-_LuckPerms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.x_-_LuckPerms.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1.21.x_-_LuckPerms.test.iml" filepath="$PROJECT_DIR$/.idea/modules/1.21.x_-_LuckPerms.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BetterMining.client.iml" filepath="$PROJECT_DIR$/.idea/modules/BetterMining.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VMM.1.21.x.client.iml" filepath="$PROJECT_DIR$/.idea/modules/VMM.1.21.x.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VMM.1.21.x.main.iml" filepath="$PROJECT_DIR$/.idea/modules/VMM.1.21.x.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VMM.1.21.x.test.iml" filepath="$PROJECT_DIR$/.idea/modules/VMM.1.21.x.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VeinminerMod.client.iml" filepath="$PROJECT_DIR$/.idea/modules/VeinminerMod.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VeinminerMod.main.iml" filepath="$PROJECT_DIR$/.idea/modules/VeinminerMod.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VeinminerMod.test.iml" filepath="$PROJECT_DIR$/.idea/modules/VeinminerMod.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.sheath.1.21.2-.4_Enchantment.client.iml" filepath="$PROJECT_DIR$/.idea/modules/com.sheath.1.21.2-.4_Enchantment.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.sheath.1.21.2-.4_Enchantment.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.sheath.1.21.2-.4_Enchantment.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.sheath.1.21.2-.4_Enchantment.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.sheath.1.21.2-.4_Enchantment.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.sheath.1.21.x.client.iml" filepath="$PROJECT_DIR$/.idea/modules/com.sheath.1.21.x.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.sheath.1.21.x.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.sheath.1.21.x.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.sheath.1.21.x.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.sheath.1.21.x.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.sheath.BetterMining.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.sheath.BetterMining.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.sheath.BetterMining.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.sheath.BetterMining.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.sheath.VeinminerMod.client.iml" filepath="$PROJECT_DIR$/.idea/modules/com.sheath.VeinminerMod.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.sheath.VeinminerMod.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.sheath.VeinminerMod.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.sheath.VeinminerMod.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.sheath.VeinminerMod.test.iml" />
+    </modules>
+  </component>
+</project>

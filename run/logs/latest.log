@@ -1,0 +1,57 @@
+[17:03:02] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.2 with Fabric Loader 0.16.9
+[17:03:03] [main/INFO] (FabricLoader) Loading 43 mods:
+	- bettermining 1.21.2-2.0
+	- fabric-api 0.106.1+1.21.2
+	- fabric-api-base 0.4.48+c47b9d4373
+	- fabric-api-lookup-api-v1 1.6.78+c47b9d4373
+	- fabric-biome-api-v1 14.0.5+c47b9d4373
+	- fabric-block-api-v1 1.0.28+c47b9d4373
+	- fabric-block-view-api-v2 1.0.16+c47b9d4373
+	- fabric-command-api-v1 1.2.56+f71b366f73
+	- fabric-command-api-v2 2.2.35+c47b9d4373
+	- fabric-commands-v0 0.2.73+df3654b373
+	- fabric-content-registries-v0 9.1.5+c47b9d4373
+	- fabric-convention-tags-v1 2.1.0+7f945d5b73
+	- fabric-convention-tags-v2 2.9.0+c47b9d4373
+	- fabric-crash-report-info-v1 0.3.3+c47b9d4373
+	- fabric-data-attachment-api-v1 1.1.38+c47b9d4373
+	- fabric-data-generation-api-v1 21.0.14+c47b9d4373
+	- fabric-dimensions-v1 4.0.7+c47b9d4373
+	- fabric-entity-events-v1 2.0.5+c47b9d4373
+	- fabric-events-interaction-v0 2.0.9+c47b9d4373
+	- fabric-game-rule-api-v1 1.0.59+c47b9d4373
+	- fabric-gametest-api-v1 2.0.13+c47b9d4373
+	- fabric-item-api-v1 11.1.5+c47b9d4373
+	- fabric-item-group-api-v1 4.1.15+e7c9ab6673
+	- fabric-lifecycle-events-v1 2.3.22+c47b9d4373
+	- fabric-loot-api-v2 3.0.24+3f89f5a573
+	- fabric-loot-api-v3 1.0.12+c47b9d4373
+	- fabric-message-api-v1 6.0.19+c47b9d4373
+	- fabric-networking-api-v1 4.3.3+56ec7ac673
+	- fabric-object-builder-api-v1 17.0.7+c47b9d4373
+	- fabric-particles-v1 4.0.8+c47b9d4373
+	- fabric-recipe-api-v1 7.0.2+c47b9d4373
+	- fabric-registry-sync-v0 5.2.0+56ec7ac673
+	- fabric-rendering-data-attachment-v1 0.3.54+73761d2e73
+	- fabric-rendering-fluids-v1 3.1.13+c47b9d4373
+	- fabric-resource-conditions-api-v1 5.0.8+c47b9d4373
+	- fabric-resource-loader-v0 3.0.5+c47b9d4373
+	- fabric-screen-handler-api-v1 1.3.98+c47b9d4373
+	- fabric-transfer-api-v1 5.4.0+c47b9d4373
+	- fabric-transitive-access-wideners-v1 6.1.8+c47b9d4373
+	- fabricloader 0.16.9
+	- java 21
+	- minecraft 1.21.2
+	- mixinextras 0.4.1
+[17:03:03] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/samue/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[17:03:03] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[17:03:04] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[17:03:04] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[17:03:15] [main/INFO] (BetterMining) [36mbettermining[0m [32mInitializing[0m
+[17:03:15] [main/INFO] (Minecraft) [STDOUT]: Registering Vein Miner Effect!
+[17:03:15] [main/INFO] (FabricDataGenHelper) Running data generator for bettermining
+[17:03:15] [main/INFO] (Minecraft) [STDOUT]: Generating Vein Miner enchantment data...
+[17:03:15] [main/INFO] (Minecraft) Starting provider: Better Mining/BetterMiningEnchantmentGenerator
+[17:03:16] [main/INFO] (Minecraft) Better Mining/BetterMiningEnchantmentGenerator finished after 540 ms
+[17:03:16] [main/INFO] (Minecraft) All providers took: 540 ms
+[17:03:16] [main/INFO] (Minecraft) Caching: total files: 1, old count: 0, new count: 2, removed stale: 0, written: 1
