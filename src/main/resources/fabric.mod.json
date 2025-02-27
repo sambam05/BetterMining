@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "bettermining",
+  "version": "${version}",
+  "name": "Better Mining",
+  "description": "",
+  "authors": ["SGTSambam"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/veinminermod/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "com.sheath.bettermining.BetterMining"
+    ],
+    "fabric-datagen": [
+      "com.sheath.bettermining.BetterMiningDataGenerator"
+    ]
+  },
+  "mixins": [
+    "bettermining.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  },
+  "suggests": {
+    "luckperms": "5.4"
+  }
+}
