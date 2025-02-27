@@ -1,7 +1,7 @@
 package com.sheath.bettermining.commands;
 
 import com.mojang.brigadier.CommandDispatcher;
-import com.sheath.bettermining.configuration.VeinminerConfig;
+import com.sheath.bettermining.BetterMining;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.text.Text;
@@ -28,7 +28,8 @@ public class VeinminerCommand {
     }
 
     private static int reloadConfig(ServerCommandSource source) {
-        VeinminerConfig.load();
+        BetterMining.saveConfigs();
+        BetterMining.loadConfigs();
         source.sendFeedback(() -> Text.literal("Veinminer configuration reloaded."), true);
         return 1;
     }

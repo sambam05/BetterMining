@@ -1,10 +1,11 @@
 package com.sheath.bettermining.commands;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import com.sheath.bettermining.configuration.EnchantmentConfig;
+import com.sheath.bettermining.configuration.GeneralConfig;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.text.Text;
-import com.sheath.bettermining.configuration.VeinminerConfig;
 import java.util.Set;
 
 public class EnchantmentCommand {
@@ -19,19 +20,24 @@ public class EnchantmentCommand {
     }
 
     private static int listEnchantments(ServerCommandSource source) {
-        Set<String> enchantments = VeinminerConfig.getRegisteredEnchantments();
+        Set<String> enchantments = EnchantmentConfig.load().registeredEnchantments.keySet(); // ✅ FIXED
+
         if (enchantments.isEmpty()) {
             source.sendFeedback(() -> Text.literal("No Veinminer enchantments registered."), false);
         } else {
             source.sendFeedback(() -> Text.literal("Registered Veinminer enchantments:"), false);
-            enchantments.forEach(enchantment -> source.sendFeedback(() -> Text.literal("- " + enchantment), false));
+            enchantments.forEach(enchantment ->
+                    source.sendFeedback(() -> Text.literal("- " + enchantment), false)
+            );
         }
+
         return 1;
     }
 
+
     private static int toggleEnchantments(ServerCommandSource source, boolean enable) {
-        VeinminerConfig.enchantmentsEnabled = enable;
-        VeinminerConfig.save();
+       GeneralConfig.load().enchantmentsEnabled = enable;
+        EnchantmentConfig.load().save();
         source.sendFeedback(() -> Text.literal("Veinminer enchantments are now " + (enable ? "enabled" : "disabled") + "."), true);
         return 1;
     }

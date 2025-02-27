@@ -2,7 +2,9 @@ package com.sheath.bettermining;
 
 import com.sheath.bettermining.commands.VeinminerCommand;
 
-import com.sheath.bettermining.configuration.VeinminerConfig;
+import com.sheath.bettermining.configuration.EnchantmentConfig;
+import com.sheath.bettermining.configuration.GeneralConfig;
+import com.sheath.bettermining.configuration.MiningConfig;
 import com.sheath.bettermining.events.BlockBreakHandler;
 import com.sheath.bettermining.events.veinminer.VeinMiningProcessor;
 import com.sheath.bettermining.init.EnchantmentInit;
@@ -32,8 +34,11 @@ public class BetterMining implements ModInitializer {
     public static final String MOD_ID ="bettermining";
     public static final LoggerTool LOGGER = LoggerTool.getLogger(BetterMining.class);
 
-    // Load the configuration
-    public static final VeinminerConfig CONFIG = VeinminerConfig.load();
+    // Store the config instances
+    public static GeneralConfig general;
+    public static MiningConfig mining;
+    public static EnchantmentConfig enchantments;
+
 
     public static final Map<ServerPlayerEntity, Boolean> playerVeinminerToggles = new HashMap<>();
 
@@ -47,6 +52,8 @@ public class BetterMining implements ModInitializer {
         LOGGER.info("Initializing");
 
         PlayerDataManager.load();
+
+        loadConfigs();
 
         // Handle player join event
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
@@ -79,7 +86,7 @@ public class BetterMining implements ModInitializer {
 
     private void onServerStarting(MinecraftServer minecraftServer){
         // Register the block break event with the vein miner handler if enabled
-        if (CONFIG.veinminerEnabled) {
+        if (general.veinminerEnabled) {
             BlockBreakHandler.register();
             LOGGER.info("Initialized with config: ");
         } else {
@@ -111,10 +118,10 @@ public class BetterMining implements ModInitializer {
         com.sheath.bettermining.miscellaneous.TPSTracker.tick(System.currentTimeMillis());
 
         // Adjust maxBlocks based on TPS
-        if (CONFIG.dynamicMaxBlocks) {
+        if (general.dynamicMaxBlocks) {
             double tps = TPSTracker.getTPS();
-            int adjustedMaxBlocks = (int) ((tps / 20.0) * (CONFIG.maxDynamicBlocks - CONFIG.minBlocks)) + CONFIG.minBlocks;
-            CONFIG.maxBlocks = Math.max(CONFIG.minBlocks, adjustedMaxBlocks);
+            int adjustedMaxBlocks = (int) ((tps / 20.0) * (general.maxDynamicBlocks - general.minBlocks)) + general.minBlocks;
+            general.maxBlocks = Math.max(general.minBlocks, adjustedMaxBlocks);
         }
     }
 
@@ -130,5 +137,23 @@ public class BetterMining implements ModInitializer {
     }
     public static Identifier id(String path) {
         return Identifier.of(MOD_ID,path);
+    }
+
+    public static void loadConfigs() {
+        general = GeneralConfig.load();
+        mining = MiningConfig.load();
+        enchantments = EnchantmentConfig.load();
+
+        // Ensure all configs are saved if they don’t exist
+        general.save();
+        mining.save();
+        enchantments.save();
+    }
+
+
+    public static void saveConfigs() {
+        general.save();
+        mining.save();
+        enchantments.save();
     }
 }

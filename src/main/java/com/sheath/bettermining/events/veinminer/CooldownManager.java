@@ -11,7 +11,7 @@ public class CooldownManager {
     public static boolean isOnCooldown(ServerPlayerEntity player) {
         long currentTime = System.currentTimeMillis();
         long lastUse = playerCooldowns.getOrDefault(player, 0L);
-        return currentTime - lastUse < BetterMining.CONFIG.cooldownSeconds * 1000L;
+        return currentTime - lastUse < BetterMining.general.cooldownSeconds * 1000L;
     }
 
     public static void setCooldown(ServerPlayerEntity player) {

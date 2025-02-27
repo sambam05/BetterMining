@@ -26,29 +26,29 @@ public class SettingsCommand {
     }
 
     private static int toggleBlockPerTool(ServerCommandSource source) {
-        BetterMining.CONFIG.blocksPerTool = !BetterMining.CONFIG.blocksPerTool;
-        BetterMining.CONFIG.save();
-        source.sendFeedback(() -> Text.literal("BlockPerTool is now " + (BetterMining.CONFIG.blocksPerTool ? "enabled" : "disabled")), true);
+        BetterMining.general.blocksPerTool = !BetterMining.general.blocksPerTool;
+        BetterMining.general.save();
+        source.sendFeedback(() -> Text.literal("BlockPerTool is now " + (BetterMining.general.blocksPerTool ? "enabled" : "disabled")), true);
         return 1;
     }
 
     private static int enableCooldown(ServerCommandSource source, boolean enabled) {
-        BetterMining.CONFIG.cooldownEnabled = enabled;
-        BetterMining.CONFIG.save();
+        BetterMining.general.cooldownEnabled = enabled;
+        BetterMining.general.save();
         source.sendFeedback(() -> Text.literal("Cooldown is now " + (enabled ? "enabled" : "disabled")), true);
         return 1;
     }
 
     private static int setCooldown(ServerCommandSource source, int seconds) {
-        BetterMining.CONFIG.cooldownSeconds = seconds;
-        BetterMining.CONFIG.save();
+        BetterMining.general.cooldownSeconds = seconds;
+        BetterMining.general.save();
         source.sendFeedback(() -> Text.literal("Cooldown time set to " + seconds + " seconds"), true);
         return 1;
     }
 
     private static int setMaxBlocks(ServerCommandSource source, int maxBlocks) {
-        BetterMining.CONFIG.maxBlocks = maxBlocks;
-        BetterMining.CONFIG.save();
+        BetterMining.general.maxBlocks = maxBlocks;
+        BetterMining.general.save();
         source.sendFeedback(() -> Text.literal("Max blocks set to " + maxBlocks), true);
         return 1;
     }

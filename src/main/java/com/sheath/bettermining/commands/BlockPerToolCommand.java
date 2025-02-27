@@ -30,9 +30,9 @@ public class BlockPerToolCommand {
     }
 
     private static int addBlockPerTool(ServerCommandSource source, String tool, String block) {
-        Set<String> toolBlocks = BetterMining.CONFIG.allowedBlocksPerTool.computeIfAbsent(tool, k -> new HashSet<>());
+        Set<String> toolBlocks = BetterMining.mining.allowedBlocksPerTool.computeIfAbsent(tool, k -> new HashSet<>());
         if (toolBlocks.add(block)) {
-            BetterMining.CONFIG.save();
+            BetterMining.mining.save();
             source.sendFeedback(() -> Text.literal("Block " + block + " added for tool " + tool + "."), true);
         } else {
             source.sendFeedback(() -> Text.literal("Block " + block + " is already in the list for tool " + tool + "."), false);
@@ -41,9 +41,9 @@ public class BlockPerToolCommand {
     }
 
     private static int removeBlockPerTool(ServerCommandSource source, String tool, String block) {
-        Set<String> toolBlocks = BetterMining.CONFIG.allowedBlocksPerTool.get(tool);
+        Set<String> toolBlocks = BetterMining.mining.allowedBlocksPerTool.get(tool);
         if (toolBlocks != null && toolBlocks.remove(block)) {
-            BetterMining.CONFIG.save();
+            BetterMining.mining.save();
             source.sendFeedback(() -> Text.literal("Block " + block + " removed from tool " + tool + "."), true);
         } else {
             source.sendFeedback(() -> Text.literal("Block " + block + " is not in the list for tool " + tool + "."), false);
@@ -52,7 +52,7 @@ public class BlockPerToolCommand {
     }
 
     private static int listBlocksPerTool(ServerCommandSource source, String tool) {
-        Set<String> toolBlocks = BetterMining.CONFIG.allowedBlocksPerTool.get(tool);
+        Set<String> toolBlocks = BetterMining.mining.allowedBlocksPerTool.get(tool);
         if (toolBlocks == null || toolBlocks.isEmpty()) {
             source.sendFeedback(() -> Text.literal("No blocks are currently added for tool " + tool + "."), false);
         } else {

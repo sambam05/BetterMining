@@ -21,19 +21,19 @@ public class BlocksCommand {
     }
 
     private static int addBlock(ServerCommandSource source, String block) {
-        if (BetterMining.CONFIG.allowedBlocks.contains(block)) {
+        if (BetterMining.mining.allowedBlocks.contains(block)) {
             source.sendFeedback(() -> Text.literal("Block " + block + " is already in the list."), false);
         } else {
-            BetterMining.CONFIG.allowedBlocks.add(block);
-            BetterMining.CONFIG.save();
+            BetterMining.mining.allowedBlocks.add(block);
+            BetterMining.mining.save();
             source.sendFeedback(() -> Text.literal("Block " + block + " added to Veinminer."), true);
         }
         return 1;
     }
 
     private static int removeBlock(ServerCommandSource source, String block) {
-        if (BetterMining.CONFIG.allowedBlocks.remove(block)) {
-            BetterMining.CONFIG.save();
+        if (BetterMining.mining.allowedBlocks.remove(block)) {
+            BetterMining.mining.save();
             source.sendFeedback(() -> Text.literal("Block " + block + " removed from Veinminer."), true);
         } else {
             source.sendFeedback(() -> Text.literal("Block " + block + " is not in the list."), false);
@@ -42,11 +42,11 @@ public class BlocksCommand {
     }
 
     private static int listBlocks(ServerCommandSource source) {
-        if (BetterMining.CONFIG.allowedBlocks.isEmpty()) {
+        if (BetterMining.mining.allowedBlocks.isEmpty()) {
             source.sendFeedback(() -> Text.literal("No blocks are currently added to the Veinminer list."), false);
         } else {
             source.sendFeedback(() -> Text.literal("Allowed blocks:"), false);
-            BetterMining.CONFIG.allowedBlocks.forEach(block -> source.sendFeedback(() -> Text.literal("- " + block), false));
+            BetterMining.mining.allowedBlocks.forEach(block -> source.sendFeedback(() -> Text.literal("- " + block), false));
         }
         return 1;
     }

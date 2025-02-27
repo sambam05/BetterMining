@@ -28,24 +28,24 @@ public class ParticlesCommand {
     }
 
     private static int toggleParticles(ServerCommandSource source, boolean enable) {
-        BetterMining.CONFIG.enableParticleOutline = enable;
-        BetterMining.CONFIG.save();
+        BetterMining.general.enableParticleOutline = enable;
+        BetterMining.general.save();
         source.sendFeedback(() -> Text.literal("Particles " + (enable ? "enabled" : "disabled") + "."), true);
         return 1;
     }
 
     private static int setParticleColor(ServerCommandSource source, int red, int green, int blue) {
-        BetterMining.CONFIG.particleRed = red;
-        BetterMining.CONFIG.particleGreen = green;
-        BetterMining.CONFIG.particleBlue = blue;
-        BetterMining.CONFIG.save();
+        BetterMining.general.particleRed = red;
+        BetterMining.general.particleGreen = green;
+        BetterMining.general.particleBlue = blue;
+        BetterMining.general.save();
         source.sendFeedback(() -> Text.literal("Particle color set."), true);
         return 1;
     }
 
     private static int setParticleDuration(ServerCommandSource source, int duration) {
-        BetterMining.CONFIG.particleDurationTicks = duration;
-        BetterMining.CONFIG.save();
+        BetterMining.general.particleDurationTicks = duration;
+        BetterMining.general.save();
         source.sendFeedback(() -> Text.literal("Particle duration set to " + duration + " ticks."), true);
         return 1;
     }

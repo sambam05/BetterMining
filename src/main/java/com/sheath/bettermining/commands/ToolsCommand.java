@@ -21,19 +21,19 @@ public class ToolsCommand {
     }
 
     private static int addTool(ServerCommandSource source, String tool) {
-        if (BetterMining.CONFIG.allowedTools.contains(tool)) {
+        if (BetterMining.mining.allowedTools.contains(tool)) {
             source.sendFeedback(() -> Text.literal("Tool " + tool + " is already in the list."), false);
         } else {
-            BetterMining.CONFIG.allowedTools.add(tool);
-            BetterMining.CONFIG.save();
+            BetterMining.mining.allowedTools.add(tool);
+            BetterMining.mining.save();
             source.sendFeedback(() -> Text.literal("Tool " + tool + " added to Veinminer."), true);
         }
         return 1;
     }
 
     private static int removeTool(ServerCommandSource source, String tool) {
-        if (BetterMining.CONFIG.allowedTools.remove(tool)) {
-            BetterMining.CONFIG.save();
+        if (BetterMining.mining.allowedTools.remove(tool)) {
+            BetterMining.mining.save();
             source.sendFeedback(() -> Text.literal("Tool " + tool + " removed from Veinminer."), true);
         } else {
             source.sendFeedback(() -> Text.literal("Tool " + tool + " is not in the list."), false);
@@ -42,11 +42,11 @@ public class ToolsCommand {
     }
 
     private static int listTools(ServerCommandSource source) {
-        if (BetterMining.CONFIG.allowedTools.isEmpty()) {
+        if (BetterMining.mining.allowedTools.isEmpty()) {
             source.sendFeedback(() -> Text.literal("No tools are currently added to the Veinminer list."), false);
         } else {
             source.sendFeedback(() -> Text.literal("Allowed tools:"), false);
-            BetterMining.CONFIG.allowedTools.forEach(tool -> source.sendFeedback(() -> Text.literal("- " + tool), false));
+            BetterMining.mining.allowedTools.forEach(tool -> source.sendFeedback(() -> Text.literal("- " + tool), false));
         }
         return 1;
     }

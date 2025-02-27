@@ -25,19 +25,19 @@ public class VeinMiningProcessor {
             Set<BlockPos> blocksToMine = new HashSet<>();
             BlockFinder.findVein(world, initialPos, initialState, blocksToMine);
 
-            if (blocksToMine.size() > BetterMining.CONFIG.maxBlocks) {
+            if (blocksToMine.size() > BetterMining.general.maxBlocks) {
                 player.sendMessage(Text.literal("Veinminer limit reached!"), false);
                 return;
             }
 
             blocksToMine.forEach(blockPos -> {
-                if (PlayerDataManager.isParticlesEnabled(player) && BetterMining.CONFIG.enableParticleOutline) {
+                if (PlayerDataManager.isParticlesEnabled(player) && BetterMining.general.enableParticleOutline) {
                     ParticleUtils.spawnPersistentEdgeParticles(
                             world, blockPos,
-                            BetterMining.CONFIG.particleRed,
-                            BetterMining.CONFIG.particleGreen,
-                            BetterMining.CONFIG.particleBlue,
-                            BetterMining.CONFIG.particleDurationTicks
+                            BetterMining.general.particleRed,
+                            BetterMining.general.particleGreen,
+                            BetterMining.general.particleBlue,
+                            BetterMining.general.particleDurationTicks
                     );
                 }
 
@@ -49,14 +49,14 @@ public class VeinMiningProcessor {
 
     // Checks if a block is allowed based on the tool and block lists
     public static boolean isBlockAllowed(BlockState state, ItemStack tool) {
-        if (BetterMining.CONFIG.blocksPerTool) {
+        if (BetterMining.general.blocksPerTool) {
             // Tool-specific block checking
             String toolKey = tool.getItem().getTranslationKey();
-            Set<String> allowedBlocksForTool = BetterMining.CONFIG.allowedBlocksPerTool.get(toolKey);
+            Set<String> allowedBlocksForTool = BetterMining.mining.allowedBlocksPerTool.get(toolKey);
             return allowedBlocksForTool != null && allowedBlocksForTool.contains(state.getBlock().getTranslationKey());
         } else {
             // Global block checking
-            return BetterMining.CONFIG.allowedBlocks.contains(state.getBlock().getTranslationKey());
+            return BetterMining.mining.allowedBlocks.contains(state.getBlock().getTranslationKey());
         }
     }
 

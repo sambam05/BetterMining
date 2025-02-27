@@ -14,7 +14,7 @@ public class BlockFinder {
         Queue<BlockPos> queue = new LinkedList<>();
         queue.add(startPos);
 
-        while (!queue.isEmpty() && blocksToMine.size() < BetterMining.CONFIG.maxBlocks) {
+        while (!queue.isEmpty() && blocksToMine.size() < BetterMining.general.maxBlocks) {
             BlockPos currentPos = queue.poll();
             if (blocksToMine.contains(currentPos)) continue;
 

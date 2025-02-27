@@ -21,7 +21,7 @@ public class BlockBreakHandler {
 
     public static boolean onBlockBreak(World world, net.minecraft.entity.player.PlayerEntity player, BlockPos pos, BlockState state, BlockEntity blockEntity) {
         if (!(player instanceof ServerPlayerEntity serverPlayer)) return true;
-        if (!BetterMining.CONFIG.veinminerEnabled) return true;
+        if (!BetterMining.general.veinminerEnabled) return true;
 
         if (!BetterMining.hasPermission(serverPlayer, "veinminer.use")) {
             serverPlayer.sendMessage(Text.literal("You do not have permission to use Veinminer!"), false);
@@ -33,16 +33,16 @@ public class BlockBreakHandler {
             return true;
         }
 
-        if (BetterMining.CONFIG.cooldownEnabled && CooldownManager.isOnCooldown(serverPlayer)) {
+        if (BetterMining.general.cooldownEnabled && CooldownManager.isOnCooldown(serverPlayer)) {
             serverPlayer.sendMessage(Text.literal("Veinminer is on cooldown!"), false);
             return false;
         }
 
-        if (BetterMining.CONFIG.cooldownEnabled) {
+        if (BetterMining.general.cooldownEnabled) {
             CooldownManager.setCooldown(serverPlayer);
         }
 
-        if (BetterMining.CONFIG.requireCrouch && !player.isSneaking()) {
+        if (BetterMining.general.requireCrouch && !player.isSneaking()) {
             return true;
         }
 
